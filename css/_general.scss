@@ -16,7 +16,7 @@ body {
     flex-direction: column;
 }
 
-h1, h2, h3, h4, p, a, li, button, label, input, textarea {
+h1, h2, h3, h4, p, a, li, button, label, input, textarea, span {
     font-family: $main-font;
     color: inherit;
 }
@@ -79,7 +79,7 @@ p {
 
 .container-medium {
     margin: 6.25rem auto 5.25rem;
-    max-width: 1070px;
+    max-width: 995px;
 }
 
 .container-large {

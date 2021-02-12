@@ -38,7 +38,7 @@ body {
           flex-direction: column;
 }
 
-h1, h2, h3, h4, p, a, li, button, label, input, textarea {
+h1, h2, h3, h4, p, a, li, button, label, input, textarea, span {
   font-family: "VTB Group UI";
   color: inherit;
 }
@@ -105,7 +105,7 @@ p {
 
 .container-medium {
   margin: 6.25rem auto 5.25rem;
-  max-width: 1070px;
+  max-width: 995px;
 }
 
 .container-large {
@@ -418,6 +418,14 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.onboarding-open-interface-text-img {
+  max-width: 71.85%;
+  position: absolute;
+  top: 8%;
+  left: 0;
 }
 
 .onboarding {
@@ -479,7 +487,8 @@ p {
 }
 
 .target-audience-section .decorative-img {
-  max-width: 29rem;
+  max-width: 26rem;
+  z-index: 3;
 }
 
 .target-audience-section-info {
@@ -706,6 +715,13 @@ p {
   position: relative;
 }
 
+.client-path-connect-text-img {
+  position: absolute;
+  max-width: 39rem;
+  top: 4rem;
+  right: 24.9rem;
+}
+
 .client-path {
   position: relative;
   z-index: 3;
@@ -779,6 +795,187 @@ p {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+/* ANIMATED ARROWS ---------------------------------------------------------- */
+.client-path-timeline {
+  position: relative;
+}
+
+.client-path-timeline .animated-arrows {
+  position: absolute;
+  left: 21.5%;
+  z-index: 3;
+  width: 0.5rem;
+  height: 0.5rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.client-path-timeline .animated-arrows:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-left: 0.16667rem solid rgba(255, 255, 255, 0.7);
+  border-bottom: 0.16667rem solid rgba(255, 255, 255, 0.7);
+  -webkit-transform: translate(0.16667rem, 0.66667rem) rotate(-45deg);
+          transform: translate(0.16667rem, 0.66667rem) rotate(-45deg);
+  -webkit-animation: animated-arrows 3s linear infinite;
+          animation: animated-arrows 3s linear infinite;
+}
+
+.client-path-timeline .animated-arrows:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-left: 0.16667rem solid rgba(255, 255, 255, 0.7);
+  border-bottom: 0.16667rem solid rgba(255, 255, 255, 0.7);
+  -webkit-transform: translate(0.33333rem, 0px) rotate(-45deg);
+          transform: translate(0.33333rem, 0px) rotate(-45deg);
+  -webkit-animation: animated-arrows 3s linear infinite -1.5s;
+          animation: animated-arrows 3s linear infinite -1.5s;
+}
+
+@-webkit-keyframes animated-arrows {
+  0% {
+    border-left: 0.16667rem solid rgba(0, 0, 0, 0);
+    border-bottom: 0.16667rem solid rgba(0, 0, 0, 0);
+    -webkit-transform: translate(-0.08333rem, -0.33333rem) rotate(-45deg);
+            transform: translate(-0.08333rem, -0.33333rem) rotate(-45deg);
+  }
+  10%, 90% {
+    border-left: 0.16667rem solid rgba(0, 0, 0, 0);
+    border-bottom: 0.16667rem solid rgba(0, 0, 0, 0);
+  }
+  50% {
+    border-left: 0.16667rem solid rgba(255, 255, 255, 0.7);
+    border-bottom: 0.16667rem solid rgba(255, 255, 255, 0.7);
+    -webkit-transform: translate(-0.08333rem, 0px) rotate(-45deg);
+            transform: translate(-0.08333rem, 0px) rotate(-45deg);
+  }
+  100% {
+    border-left: 0.16667rem solid rgba(0, 0, 0, 0);
+    border-bottom: 0.16667rem solid rgba(0, 0, 0, 0);
+    -webkit-transform: translate(-0.08333rem, 0.33333rem) rotate(-45deg);
+            transform: translate(-0.08333rem, 0.33333rem) rotate(-45deg);
+  }
+}
+
+@keyframes animated-arrows {
+  0% {
+    border-left: 0.16667rem solid rgba(0, 0, 0, 0);
+    border-bottom: 0.16667rem solid rgba(0, 0, 0, 0);
+    -webkit-transform: translate(-0.08333rem, -0.33333rem) rotate(-45deg);
+            transform: translate(-0.08333rem, -0.33333rem) rotate(-45deg);
+  }
+  10%, 90% {
+    border-left: 0.16667rem solid rgba(0, 0, 0, 0);
+    border-bottom: 0.16667rem solid rgba(0, 0, 0, 0);
+  }
+  50% {
+    border-left: 0.16667rem solid rgba(255, 255, 255, 0.7);
+    border-bottom: 0.16667rem solid rgba(255, 255, 255, 0.7);
+    -webkit-transform: translate(-0.08333rem, 0px) rotate(-45deg);
+            transform: translate(-0.08333rem, 0px) rotate(-45deg);
+  }
+  100% {
+    border-left: 0.16667rem solid rgba(0, 0, 0, 0);
+    border-bottom: 0.16667rem solid rgba(0, 0, 0, 0);
+    -webkit-transform: translate(-0.08333rem, 0.33333rem) rotate(-45deg);
+            transform: translate(-0.08333rem, 0.33333rem) rotate(-45deg);
+  }
+}
+
+.arrows {
+  height: 2.5rem;
+  width: .7rem;
+  position: absolute;
+  left: 21.2%;
+  top: 1.75rem;
+  z-index: 3;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.arrows .arrow {
+  display: block;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.arrowSliding {
+  position: absolute;
+  -webkit-animation: slide 4s linear infinite;
+  animation: slide 4s linear infinite;
+}
+
+.delay1 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.delay2 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.delay3 {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2rem);
+            transform: translateY(2rem);
+  }
 }
 
 /* ----------------------- API SUPPLIERS CONTAINER ----------------------- */

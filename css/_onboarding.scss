@@ -7,6 +7,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: relative;
+}
+
+.onboarding-open-interface-text-img {
+    max-width: 71.85%;
+    // max-width: 59.906rem;
+    position: absolute;
+    top: 8%;
+    left: 0;
 }
 
 .onboarding {
