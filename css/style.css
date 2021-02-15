@@ -443,7 +443,7 @@ p {
   margin: 1.75rem 0 6.25rem;
 }
 
-.onboarding button {
+.onboarding-button {
   padding: 1rem 2rem;
 }
 
@@ -454,6 +454,7 @@ p {
   right: 2.8rem;
   top: .5rem;
   -webkit-animation: rotation 13s infinite linear;
+  animation: rotation 13s infinite linear;
 }
 
 @-webkit-keyframes rotation {
@@ -465,11 +466,44 @@ p {
   }
 }
 
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
 .onboarding-arrow {
   max-width: 5.75rem;
   position: absolute;
   right: 3.6rem;
   top: 9.5rem;
+}
+
+.fixed-button {
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.small-onboarding-button {
+  padding: 1rem;
+}
+
+.small-onboarding-button .plus-button {
+  margin: 0;
+}
+
+.small-onboarding-button p {
+  display: none;
 }
 
 /* ----------------------- TARGET AUDIENCE CONTAINER ----------------------- */

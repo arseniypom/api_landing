@@ -41,18 +41,18 @@
             </div>
         </header>
 
-        <div class="onboarding-bg blue-bg">
+        <div class="onboarding-bg blue-bg" id="onboarding">
             <img src="/images/open-interface-text.png" alt="open interface" class="onboarding-open-interface-text-img">
             <div class="container-medium onboarding">
                 <h3>Портал API ВТБ — тестирование и эксплуатация сервисов и данных банка</h3>
                 <h1>Получите доступ к банковским сервисам и используйте их </h1>
-                <button class="button-transparent"><img src="/images/plus.svg" alt="plus" class="plus-button">Подключиться</button>
+                <div class="fixed-button"><button class="button-transparent onboarding-button"><img src="/images/plus.svg" alt="plus" class="plus-button"><p class="fixed-button-text">Подключиться</p></button></div>
                 <img class="onboarding-round-letters" src="/images/round_letters.svg" alt="scroll down">
                 <img class="onboarding-arrow" src="/images/arrow-down.png" alt="arrow">
             </div>
         </div>
 
-        <div class="target-audience-bg dark-grey-bg">
+        <div class="target-audience-bg dark-grey-bg" id="targetAudience">
             <div class="container-medium target-audience">
                 <div class="title-container">
                     <h2 class="title-text-neutral title-container-number">01</h2> <h2 class="title-text-green"><</h2> <h2 class="title-text-neutral">Кому</h2> <h2 class="title-text-green">полезны API ></h2>
@@ -187,7 +187,6 @@
                 </div>
                 <div class="client-path-timeline">
                     <img src="/images/timeline.svg" alt="timeline">
-                    <!-- <div class="animated-arrows"></div> -->
                     <div class="arrows">
                         <div class="arrowSliding">
                             <span class="arrow"> > </span>
@@ -327,16 +326,16 @@
                         <a href="" class="card-read_more"><img src="/images/arrow-right.svg" alt="arrow" class="card-arrow"><p>Подробнее</p></a>
                     </div>
 
-                    <div class="news-card">
+                    <div class="news-card" id="lastNewsCard">
                         <h1>Читайте все новости портала</h1>
                         <a href="" class="card-read_more"><img src="/images/arrow-right.svg" alt="arrow" class="card-arrow"><p>Перейти в новости</p></a>
                     </div>                
                 </div>
-                <div class="news-action"><button class="button-blue button-blue-big news-action-button" type="submit"><img src="/images/plus.svg" alt="plus" class="plus-button">Подключиться</button></div>
+                <!-- <div class="news-action"><button class="button-blue button-blue-big news-action-button" type="submit"><img src="/images/plus.svg" alt="plus" class="plus-button">Подключиться</button></div> -->
             </div>
         </div>
 
-        <footer class="footer-bg">
+        <footer class="footer-bg" id="footer">
             <!-- <div class="footer-logo-wrapper"> -->
                 <a href="/"><img src="images/logo.png" alt="VTB" class="header-logo"/></a>
             <!-- </div> -->

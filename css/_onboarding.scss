@@ -33,7 +33,7 @@
         margin: 1.75rem 0 6.25rem;
     }
 
-    button {
+    &-button {
         padding: 1rem 2rem;
     }
 
@@ -46,6 +46,7 @@
         top: .5rem;
 
         -webkit-animation: rotation 13s infinite linear;
+        animation: rotation 13s infinite linear;
     }
     @-webkit-keyframes rotation {
         from {
@@ -55,6 +56,14 @@
             -webkit-transform: rotate(359deg);
         }
     }
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+    }
 
     &-arrow {
         max-width: 5.75rem;
@@ -62,5 +71,26 @@
         position: absolute;
         right: 3.6rem;
         top: 9.5rem;
+    }
+}
+
+// ANIMATED BUTTON
+.fixed-button {
+    // position: fixed;
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    // transition: left 2s, width 2s;
+    transition: transform 1s;
+}
+
+.small-onboarding-button {
+    padding: 1rem;
+
+    .plus-button {
+        margin: 0;
+    }
+    p {
+        display: none;
     }
 }
