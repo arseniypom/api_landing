@@ -3,6 +3,7 @@
 .news {
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 .news-cards-wrapper {
@@ -74,9 +75,11 @@
 }
 
 .news-action {
-    margin-top: 4.25rem;
-    display: flex;
-    justify-content: center;
+    &-active {
+        position: absolute;
+        bottom: -5rem;
+        left: 41%;
+    }
 }
 
 @media (max-width: 1200px) {

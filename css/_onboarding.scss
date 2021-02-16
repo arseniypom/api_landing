@@ -33,10 +33,6 @@
         margin: 1.75rem 0 6.25rem;
     }
 
-    &-button {
-        padding: 1rem 2rem;
-    }
-
     &-round-letters {
         width: 120px;
         height: 120px;
@@ -76,21 +72,11 @@
 
 // ANIMATED BUTTON
 .fixed-button {
-    // position: fixed;
-    position: absolute;
     left: 0;
+    bottom: 2rem;
     z-index: 100;
-    // transition: left 2s, width 2s;
-    transition: transform 1s;
-}
 
-.small-onboarding-button {
-    padding: 1rem;
-
-    .plus-button {
-        margin: 0;
-    }
-    p {
+    &-hidden {
         display: none;
     }
 }
