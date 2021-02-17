@@ -40,42 +40,57 @@ $(function () {
         var lastNewsCardBottom = lastNewsCard.getBoundingClientRect().bottom;
 
         var footerDiv = document.querySelector('#footer');
+        var footerInfoDiv = document.querySelector('.footer-info');
         var footerDivTop = footerDiv.getBoundingClientRect().top;
+        var footerInfoDivBottom = footerInfoDiv.getBoundingClientRect().bottom;
+        var footerDivHeight = $("#footer").outerHeight();
         
         var onboardingDiv = document.querySelector('#onboarding');
         var onboardingDivBottom = onboardingDiv.getBoundingClientRect().bottom;
-        console.log(footerDivTop);
 
         if (onboardingDivBottom < document.documentElement.clientHeight) {
-          $(".fixed-button").css({
-            "position": "fixed",
-            "left": "2rem"
+          $(".onboarding-button").css({
+            "left":"2rem",
+            "padding": "1rem"
           });
-          $(".onboarding-button").addClass("button-blue button-blue-square");
           $(".onboarding-button").removeClass("button-transparent button-transparent-big");
+          $(".onboarding-button").addClass("button-blue");
+          $(".onboarding-button-text").css({
+            "display":"none",
+          })
 
-          if (footerDivTop < (window.innerHeight || document.documentElement.clientHeight)) {
-            $(".news-action-button").addClass("button-blue-big");
-            $(".news-action-button").removeClass("button-blue-square");
-            $(".news-action").removeClass("fixed-button-hidden");
-            $(".news-action").addClass("news-action-active");
-            $(".onboarding-action").addClass("fixed-button-hidden");
+          if (footerInfoDivBottom < (window.innerHeight || document.documentElement.clientHeight)) {
+            $(".onboarding-button").css({
+              "left":"43%",
+              "padding": "1rem 2rem",
+              "bottom": `${footerDivHeight + 50}px`
+            });
+            $(".onboarding-button-text").css({
+              "display":"inline",
+            })
           } else {
-            $(".news-action-button").removeClass("button-blue-big");
-            $(".news-action-button").addClass("button-blue-square");
-            $(".news-action").addClass("fixed-button-hidden");
-            $(".news-action").removeClass("news-action-active");
-            $(".onboarding-action").removeClass("fixed-button-hidden");
+            $(".onboarding-button").css({
+              "left":"2rem",
+              "padding": "1rem",
+              "bottom": "15%"
+            });
+            $(".onboarding-button-text").css({
+              "display":"none",
+            })
           }
         } else {
-          $(".fixed-button").css({
-            "position": "unset",
+          $(".onboarding-button").css({
+            "left":"16%",
+            "bottom":"15%",
+            "padding":"1rem 2rem"
           });
-          $(".onboarding-button").removeClass("button-blue button-blue-square");
+          $(".onboarding-button").removeClass("button-blue");
           $(".onboarding-button").addClass("button-transparent button-transparent-big");
+          $(".onboarding-button-text").css({
+            "display":"inline",
+          })
         }
 
-        // $(".fixed-button").css('left',(scrollValue / 2)+'px');
 
 
         if (lastNewsCardBottom > (window.innerHeight || document.documentElement.clientHeight)) {

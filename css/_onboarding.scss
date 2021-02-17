@@ -71,12 +71,16 @@
 }
 
 // ANIMATED BUTTON
-.fixed-button {
-    left: 0;
-    bottom: 2rem;
-    z-index: 100;
+.onboarding-button {
+    position: fixed;
+    color: #fff;
+    left: 16%;
+    bottom: 15%;
+    z-index: 4;
+    
+    transition: left .3s;
 
-    &-hidden {
-        display: none;
+    &-text {
+        margin-left: .375rem;
     }
 }

@@ -160,9 +160,6 @@ p {
     &-big {
         padding: 1rem 2rem;
         font-size: 1rem;
-        .plus-img {
-            margin-right: .375rem;
-        }
     }
     &-small {
         padding: .625rem 1.5rem;
@@ -170,12 +167,6 @@ p {
     }
     &-square {
         padding: 1rem;
-        .plus-img {
-            margin: 0;
-        }
-        p {
-            display: none;
-        }
     }
 }
 
@@ -202,16 +193,10 @@ p {
 
     &-big {
         padding: 1rem 2rem;
-        .plus-img {
-            margin-right: .375rem;
-        }
     }
 
     &-square {
         padding: 1rem;
-        .plus-img {
-            margin: 0;
-        }
         p {
             display: none;
         }

@@ -196,10 +196,6 @@ p {
   font-size: 1rem;
 }
 
-.button-blue-big .plus-img {
-  margin-right: .375rem;
-}
-
 .button-blue-small {
   padding: .625rem 1.5rem;
   font-size: .875rem;
@@ -207,14 +203,6 @@ p {
 
 .button-blue-square {
   padding: 1rem;
-}
-
-.button-blue-square .plus-img {
-  margin: 0;
-}
-
-.button-blue-square p {
-  display: none;
 }
 
 .button-blue:hover {
@@ -250,16 +238,8 @@ p {
   padding: 1rem 2rem;
 }
 
-.button-transparent-big .plus-img {
-  margin-right: .375rem;
-}
-
 .button-transparent-square {
   padding: 1rem;
-}
-
-.button-transparent-square .plus-img {
-  margin: 0;
 }
 
 .button-transparent-square p {
@@ -512,14 +492,18 @@ p {
   top: 9.5rem;
 }
 
-.fixed-button {
-  left: 0;
-  bottom: 2rem;
-  z-index: 100;
+.onboarding-button {
+  position: fixed;
+  color: #fff;
+  left: 16%;
+  bottom: 15%;
+  z-index: 4;
+  -webkit-transition: left .3s;
+  transition: left .3s;
 }
 
-.fixed-button-hidden {
-  display: none;
+.onboarding-button-text {
+  margin-left: .375rem;
 }
 
 /* ----------------------- TARGET AUDIENCE CONTAINER ----------------------- */
@@ -1089,6 +1073,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  margin-bottom: 12rem;
 }
 
 .news-cards-wrapper {
