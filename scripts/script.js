@@ -33,15 +33,16 @@ var document_height = $(document).height() - $(window).height();
 
 $(function () {
     $(window).scroll(function () {
-        var scrollValue = $(window).scrollTop();
-        var winWdith = $(window).width();
+        // var scrollValue = $(window).scrollTop();
+        // var winWdith = $(window).width();
+        var distanceFromBottom = document.body.scrollHeight - window.innerHeight - window.scrollY;
 
         var lastNewsCard = document.querySelector('#lastNewsCard');
         var lastNewsCardBottom = lastNewsCard.getBoundingClientRect().bottom;
 
         var footerDiv = document.querySelector('#footer');
         var footerInfoDiv = document.querySelector('.footer-info');
-        var footerDivTop = footerDiv.getBoundingClientRect().top;
+        // var footerDivTop = footerDiv.getBoundingClientRect().top;
         var footerInfoDivBottom = footerInfoDiv.getBoundingClientRect().bottom;
         var footerDivHeight = $("#footer").outerHeight();
         
@@ -59,11 +60,11 @@ $(function () {
             "display":"none",
           })
 
-          if (footerInfoDivBottom < (window.innerHeight || document.documentElement.clientHeight)) {
+          if (distanceFromBottom <= footerDivHeight - distanceFromBottom + 50) {
             $(".onboarding-button").css({
               "left":"43%",
               "padding": "1rem 2rem",
-              "bottom": `${footerDivHeight + 50}px`
+              "bottom": `${footerDivHeight - distanceFromBottom + 50}px`
             });
             $(".onboarding-button-text").css({
               "display":"inline",
