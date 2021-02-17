@@ -20,8 +20,13 @@
     align-items: flex-start;
     justify-content: space-between;
 
-    .decorative-img {
+    .decorative-img-1 {
         max-width: 26rem;
+        z-index: 3;
+    }
+
+    .decorative-img-2 {
+        max-width: 30rem;
         z-index: 3;
     }
 
@@ -63,6 +68,10 @@
             right: -1rem;
             bottom: -6.625rem;
         }
+    }
+
+    &-info-1 {
+        margin-right: 3rem;
     }
 
     &-info-bullets {

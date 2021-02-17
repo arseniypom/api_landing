@@ -523,8 +523,13 @@ p {
           justify-content: space-between;
 }
 
-.target-audience-section .decorative-img {
+.target-audience-section .decorative-img-1 {
   max-width: 26rem;
+  z-index: 3;
+}
+
+.target-audience-section .decorative-img-2 {
+  max-width: 30rem;
   z-index: 3;
 }
 
@@ -564,6 +569,10 @@ p {
   position: absolute;
   right: -1rem;
   bottom: -6.625rem;
+}
+
+.target-audience-section-info-1 {
+  margin-right: 3rem;
 }
 
 .target-audience-section-info-bullets li {
