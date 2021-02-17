@@ -8,18 +8,20 @@ $(window).on("scroll", function() {
     $(".header").css('top', '-70px')
   }
   prevScrollpos = currentScrollPos;
+
+  // Добавление непрозрачного фона хэдеру при скролле ниже 190 пикселей
+  // Добавление прозрачного фона при нахождении наверху страницы
+  if ($(window).scrollTop() > 190) {
+    $(".header").css({
+      "background-color": "#0062FF"
+    });
+  } else {
+    $(".header").css({
+      "background-color": "transparent"
+    });
+  }
 });
 
-// Добавление непрозрачного фона хэдеру при скролле ниже ста пикселей
-// Добавление прозрачного фона и отображение хэдера при нахождении наверху страницы
-$(window).on("scroll", function() {
-    if($(window).scrollTop() > 100) {
-        $(".header").addClass("bg-color");
-    } else {
-       $(".header").removeClass("bg-color");
-       $(".header").css('top', '0')
-    }
-});
 
 function closeCookieBanner() {
   $(".cookie-banner").css('display', 'none');
@@ -81,7 +83,7 @@ $(function () {
           }
         } else {
           $(".onboarding-button").css({
-            "left":"16%",
+            "left":"8.75%",
             "bottom":"15%",
             "padding":"1rem 2rem"
           });

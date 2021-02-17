@@ -1,4 +1,17 @@
 /* ----------------------- TARGET AUDIENCE CONTAINER ----------------------- */
+.target-audience-bg {
+    position: relative;
+    overflow: visible;
+    &-plus {
+        position: absolute;
+        bottom: -.8rem;
+        left: 42.5%;
+    }
+}
+
+.target-audience-content-wrapper {
+    overflow: hidden;
+}
 
 .target-audience-section {
     margin-top: 2rem;
