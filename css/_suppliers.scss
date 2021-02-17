@@ -8,7 +8,7 @@
     margin-right: auto;
     margin-top: 0;
 
-    padding: 2.75rem 2.75rem .25rem;
+    padding: 2.75rem .875rem .25rem 2.75rem;
 
     display: flex;
     flex-wrap: wrap;
@@ -123,8 +123,12 @@
             height: 3.5rem;
         }
 
-        .button-blue-big {
-            max-width: 12.125rem;    
+        &-button {
+            max-width: 12.125rem;
+            
+            &-icon {
+                margin-right: .45rem;
+            }
         }
     }
 }

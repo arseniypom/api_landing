@@ -83,7 +83,7 @@ p {
 
 .title-container {
   margin: 6.25rem auto 3.5rem;
-  max-width: 1070px;
+  max-width: 82.5%;
 }
 
 .title-container h2 {
@@ -114,10 +114,6 @@ p {
 }
 
 @media (max-width: 1200px) {
-  .title-container {
-    margin: 6.25rem auto 3.5rem;
-    max-width: 970px;
-  }
   .container-medium {
     margin: 6.25rem auto 5.25rem;
     max-width: 970px;
@@ -129,10 +125,6 @@ p {
 }
 
 @media (max-width: 992px) {
-  .title-container {
-    margin: 6.25rem auto 3.5rem;
-    max-width: 750px;
-  }
   .container-medium {
     margin: 6.25rem auto 5.25rem;
     max-width: 750px;
@@ -144,10 +136,6 @@ p {
 }
 
 @media (max-width: 767px) {
-  .title-container {
-    margin: 6.25rem auto 3.5rem;
-    max-width: none;
-  }
   .container-medium {
     margin: 6.25rem auto 5.25rem;
     max-width: none;
@@ -158,8 +146,15 @@ p {
   }
 }
 
-.blue-bg {
-  background: center no-repeat url("../images/onboarding_bg.png");
+.connect-bg {
+  background: center no-repeat url("../images/connect-bg.png");
+}
+
+.open-interface-bg {
+  background: center no-repeat url("../images/open-interface-bg.png");
+}
+
+.connect-bg, .open-interface-bg {
   background-size: cover;
   color: #fff;
   overflow: hidden;
@@ -346,8 +341,8 @@ p {
   position: fixed;
   z-index: 100;
   top: 0;
-  -webkit-transition: top 0.2s ease-in-out;
-  transition: top 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .header-logo {
@@ -409,14 +404,6 @@ p {
   font-weight: 600;
 }
 
-.hide {
-  top: -70px;
-}
-
-.bg-color {
-  background-color: #0062FF;
-}
-
 /* ----------------------- ONBOARDING CONTAINER ----------------------- */
 .onboarding-bg {
   width: 100%;
@@ -444,6 +431,7 @@ p {
   color: #fff;
   position: relative;
   width: 100%;
+  max-width: 82.5%;
 }
 
 .onboarding h3 {
@@ -495,7 +483,7 @@ p {
 .onboarding-button {
   position: fixed;
   color: #fff;
-  left: 16%;
+  left: 8.75%;
   bottom: 15%;
   z-index: 4;
   -webkit-transition: left .3s;
@@ -507,6 +495,21 @@ p {
 }
 
 /* ----------------------- TARGET AUDIENCE CONTAINER ----------------------- */
+.target-audience-bg {
+  position: relative;
+  overflow: visible;
+}
+
+.target-audience-bg-plus {
+  position: absolute;
+  bottom: -.8rem;
+  left: 42.5%;
+}
+
+.target-audience-content-wrapper {
+  overflow: hidden;
+}
+
 .target-audience-section {
   margin-top: 2rem;
   display: -webkit-box;
@@ -520,8 +523,13 @@ p {
           justify-content: space-between;
 }
 
-.target-audience-section .decorative-img {
+.target-audience-section .decorative-img-1 {
   max-width: 26rem;
+  z-index: 3;
+}
+
+.target-audience-section .decorative-img-2 {
+  max-width: 30rem;
   z-index: 3;
 }
 
@@ -561,6 +569,10 @@ p {
   position: absolute;
   right: -1rem;
   bottom: -6.625rem;
+}
+
+.target-audience-section-info-1 {
+  margin-right: 3rem;
 }
 
 .target-audience-section-info-bullets li {
@@ -763,8 +775,8 @@ p {
 
 .client-path-triangle {
   position: absolute;
-  right: 21rem;
-  top: 1rem;
+  right: 19rem;
+  top: -10rem;
 }
 
 .upper-steps-div {
@@ -797,7 +809,7 @@ p {
 
 .client-path-steps-item .step-number-img-first {
   right: -.625rem;
-  top: -4rem;
+  top: -3rem;
 }
 
 .client-path-steps-item-number {
@@ -930,7 +942,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
-  padding: 2.75rem 2.75rem .25rem;
+  padding: 2.75rem .875rem .25rem 2.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1064,8 +1076,12 @@ p {
   height: 3.5rem;
 }
 
-.become-supplier-form .button-blue-big {
+.become-supplier-form-button {
   max-width: 12.125rem;
+}
+
+.become-supplier-form-button-icon {
+  margin-right: .45rem;
 }
 
 /* ----------------------- NEWS CONTAINER ----------------------- */

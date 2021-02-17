@@ -57,7 +57,7 @@ p {
 
 .title-container {
     margin: 6.25rem auto 3.5rem;
-    max-width: 1070px;
+    max-width: 82.5%;
 
     h2 {
         display: inline-block;
@@ -73,8 +73,6 @@ p {
         margin: 0 .3rem;
         color: #22D9A2;
     }
-
-    // font-feature-settings: 'tnum' on, 'lnum' on, 'cv03' on, 'cv04' on;
 }
 
 .container-medium {
@@ -88,11 +86,6 @@ p {
 }
 
 @media (max-width: 1200px) {
-
-    .title-container {
-        margin: 6.25rem auto 3.5rem;
-        max-width: 970px;
-    }
     .container-medium {
         margin: 6.25rem auto 5.25rem;
         max-width: 970px;
@@ -103,10 +96,6 @@ p {
     }
 }
 @media (max-width: 992px) {
-    .title-container {
-        margin: 6.25rem auto 3.5rem;
-        max-width: 750px;
-    }
     .container-medium {
         margin: 6.25rem auto 5.25rem;
         max-width: 750px;
@@ -117,10 +106,6 @@ p {
     }
 }
 @media (max-width: 767px) {
-    .title-container {
-        margin: 6.25rem auto 3.5rem;
-        max-width: none;
-    }
     .container-medium {
         margin: 6.25rem auto 5.25rem;
         max-width: none;
@@ -131,8 +116,13 @@ p {
     }
 }
 
-.blue-bg {
-    background: center no-repeat url("../images/onboarding_bg.png");
+.connect-bg {
+    background: center no-repeat url("../images/connect-bg.png");
+}
+.open-interface-bg {
+    background: center no-repeat url("../images/open-interface-bg.png");
+}
+.connect-bg, .open-interface-bg {
     background-size: cover;
     color: #fff;
     overflow: hidden;
