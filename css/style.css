@@ -292,6 +292,10 @@ p {
   margin-top: .75rem;
 }
 
+.cookie-banner-text-link {
+  text-decoration: underline;
+}
+
 .cookie-banner button {
   display: -webkit-box;
   display: -ms-flexbox;

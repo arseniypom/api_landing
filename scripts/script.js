@@ -28,15 +28,9 @@ function closeCookieBanner() {
 }
 
 // Анимирование кнопки
-var window_width = $(window).width() - $('.fixed-button').width();
-
-var document_height = $(document).height() - $(window).height();
-
 
 $(function () {
     $(window).scroll(function () {
-        // var scrollValue = $(window).scrollTop();
-        // var winWdith = $(window).width();
         var distanceFromBottom = document.body.scrollHeight - window.innerHeight - window.scrollY;
 
         var lastNewsCard = document.querySelector('#lastNewsCard');
@@ -93,42 +87,8 @@ $(function () {
             "display":"inline",
           })
         }
-
-
-
-        if (lastNewsCardBottom > (window.innerHeight || document.documentElement.clientHeight)) {
-          // console.log("Out");
-        } else {
-          // console.log("In");
-        }
-
-        // if (bounding.top > 0) {
-        //   console.log("In");
-        // } else {
-        //   console.log("Out");
-        // }
     });
 });
 
-// Our element
-// var newsDiv = document.querySelector('#news');
-var elem = document.querySelector('#lastNewsCard');
-var bounding = elem.getBoundingClientRect();
-// Set our distance placeholder
-var distance = 0;
-// Loop up the dom
-do {
-    // Increase our distance counter
-    distance += elem.offsetTop;
-
-    // Set the element to it's parent
-    elem = elem.offsetParent;
-    // if (bounding.bottom > (window.innerHeight || document.documentElement.clientHeight)) {
-    //   console.log("Out");
-    // } else {
-    //   console.log("In");
-    // }
-} while (elem);
-distance = distance < 0 ? 0 : distance;
 
 
