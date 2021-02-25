@@ -97,8 +97,10 @@ $('#public-api').click(function(){
     'margin-left': '0',
     'width': '12.063rem'
   });
-  $('.catalog-info-unique').css('display','none');
-  $('.catalog-info-public').css('display','block');
+  $('.catalog-bg-plus-img, .catalog-switch-plus-img').fadeToggle();
+  $('.catalog-info-unique').hide();
+  $('.catalog-info-public').show();
+  $('.catalog-info-unique').fadeOut();
 });
 
 $('#unique-api').click(function(){
@@ -106,8 +108,9 @@ $('#unique-api').click(function(){
     'margin-left': '12.5rem',
     'width': '12.5rem'
   });
-  $('.catalog-info-public').css('display','none');
-  $('.catalog-info-unique').css('display','block');
+  $('.catalog-bg-plus-img, .catalog-switch-plus-img').fadeToggle();
+  $('.catalog-info-public').hide();
+  $('.catalog-info-unique').show();
 });
 
 
