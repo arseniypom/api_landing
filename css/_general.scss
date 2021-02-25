@@ -20,6 +20,7 @@ body {
 h1, h2, h3, h4, p, a, li, button, label, input, textarea, span {
     font-family: $main-font;
     color: inherit;
+    font-feature-settings: 'tnum' on, 'lnum' on, 'cv03' on, 'cv04' on;
 }
 
 a:hover, button:hover {
@@ -56,6 +57,10 @@ p {
     color: $color-neutral-30;
 }
 
+.text-green {
+    color: #22D9A2;
+}
+
 .title-container {
     margin: 6.25rem auto 3.5rem;
     max-width: 82.5%;
@@ -72,7 +77,6 @@ p {
     }
     .title-text-green {
         margin: 0 .3rem;
-        color: #22D9A2;
     }
 }
 
@@ -135,7 +139,6 @@ p {
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    // background-color: #000;
     color: $color-neutral-05;
     overflow: hidden;
     width: 100%;

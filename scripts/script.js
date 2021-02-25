@@ -9,9 +9,9 @@ $(window).on("scroll", function() {
   }
   prevScrollpos = currentScrollPos;
 
-  // Добавление непрозрачного фона хэдеру при скролле ниже 190 пикселей
+  // Добавление непрозрачного фона хэдеру при скролле ниже 70 пикселей
   // Добавление прозрачного фона при нахождении наверху страницы
-  if ($(window).scrollTop() > 190) {
+  if ($(window).scrollTop() > 70) {
     $(".header").css({
       "background-color": "#0062FF"
     });

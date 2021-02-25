@@ -41,6 +41,8 @@ body {
 h1, h2, h3, h4, p, a, li, button, label, input, textarea, span {
   font-family: "VTB Group UI";
   color: inherit;
+  -webkit-font-feature-settings: 'tnum' on, 'lnum' on, 'cv03' on, 'cv04' on;
+          font-feature-settings: 'tnum' on, 'lnum' on, 'cv03' on, 'cv04' on;
 }
 
 a:hover, button:hover {
@@ -81,6 +83,10 @@ p {
   color: #B1B5BB;
 }
 
+.text-green {
+  color: #22D9A2;
+}
+
 .title-container {
   margin: 6.25rem auto 3.5rem;
   max-width: 82.5%;
@@ -100,7 +106,6 @@ p {
 
 .title-container .title-text-green {
   margin: 0 .3rem;
-  color: #22D9A2;
 }
 
 .container-medium {
@@ -1467,5 +1472,131 @@ p {
   position: absolute;
   right: 1.25rem;
   top: 1.25rem;
+}
+
+/* ----------------------- CONNECTION PAGE ----------------------- */
+.connection-bg {
+  position: relative;
+  overflow: visible;
+}
+
+.connection-bg-rhombus-img {
+  position: absolute;
+  right: 13.2%;
+  bottom: -1.75rem;
+  z-index: 3;
+}
+
+.connection-content-wrapper {
+  overflow: hidden;
+}
+
+.connection {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7rem;
+}
+
+.connection-header {
+  margin-bottom: 1rem;
+}
+
+.connection-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 62.5rem;
+  position: relative;
+}
+
+.connection-section-general {
+  margin-bottom: 2.25rem;
+}
+
+.connection-section-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.connection-section-title-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background: #22242A;
+}
+
+.connection-section-title h3 {
+  font-weight: 600;
+  margin-left: 1.25rem;
+  width: 14.625rem;
+}
+
+.connection-section-plus-img {
+  position: absolute;
+  top: 5.938rem;
+  left: 6.5rem;
+}
+
+.connection-section-instruction {
+  padding-top: .8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.connection-section-instruction-title {
+  font-size: 1.125rem;
+  width: 34.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.connection-section-instruction-step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.connection-section-instruction-step-text {
+  width: 32.25rem;
+  margin-left: 2rem;
+}
+
+.connection-section-instruction-step h4 {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.connection-section-arrow-img {
+  height: 13.125rem;
+  position: absolute;
+  right: -10.5rem;
+  top: -.5rem;
 }
 /*# sourceMappingURL=style.css.map */
