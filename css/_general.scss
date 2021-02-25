@@ -2,6 +2,7 @@
 $main-font: "VTB Group UI";
 $color-neutral-05: #F3F4F6;
 $color-neutral-30: #B1B5BB;
+$color-neutral-50: #7B7E86;
 $color-neutral-90: #22242A;
 
 
@@ -125,6 +126,17 @@ p {
 .connect-bg, .open-interface-bg {
     background-size: cover;
     color: #fff;
+    overflow: hidden;
+    width: 100%;
+}
+
+.dark-gradient-bg {
+    background-image: url("../images/dark-gradient-bg.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-color: #000;
+    color: $color-neutral-05;
     overflow: hidden;
     width: 100%;
 }

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВТБ API</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- CSS -->
+    <!-- reset -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- custom styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="content">
+        
+        <header class="header" id="navbar">
+            <a href="/"><img src="images/logo.png" alt="VTB" class="header-logo"/></a>
+            <div class="header-menu">
+                <div class="header-menu-links">
+                    <a class="header-menu-links-item active" href="/catalog.html">Каталог API</a>
+                    <a class="header-menu-links-item" href="/connection.html">Подключение</a>
+                    <a class="header-menu-links-item" href="">Поддержка</a>
+                    <a class="header-menu-links-item" href="">Блог</a>
+                </div>
+                <div class="header-menu-search-and-login">
+                    <img src="/images/search-icon.svg" alt="" class="search-icon">
+                    <a href="https://api-registration-18211.web.app/registration">Регистрация</a>
+                    <a href="https://api-registration-18211.web.app">Вход</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="catalog-bg dark-gradient-bg">
+            <div class="container-large catalog">
+                <h1 class="catalog-header">Каталог API</h1>
+                <ul class="catalog-switch">
+                    <li class="catalog-switch-option catalog-switch-option-public" id="public-api"><p>Публичные данные </p></li>
+                    <li class="catalog-switch-option catalog-switch-option-unique" id="unique-api"><p>Уникальные данные</p></li>
+                    <hr class="catalog-background-line" />
+                    <hr class="catalog-switch-line" />
+                </ul>
+                <div class="catalog-info catalog-info-public">
+                    <p class="catalog-info-description catalog-info-description-public">Доступные для свободного тестирования и использования в разработках</p>
+                    <div class="catalog-info-public-cards">
+                        <div class="catalog-info-public-cards-item">
+                            <h4>Курсы валют</h4>
+                            <p>Обменные курсы валют и комиссии для граждан зарубежных стран в офисах и банкоматах ВТБ</p>
+                            <button class="button-transparent">Подключить</button>
+                            <div class="catalog-info-public-cards-item-icon">
+                                <img src="/images/ruble-icon.svg" alt="ruble">
+                            </div>
+                        </div>
+                        <div class="catalog-info-public-cards-item">
+                            <h4>Отделения Банка ВТБ</h4>
+                            <p>График работы клиентский офисов, их расположение</p>
+                            <button class="button-transparent">Подключить</button>
+                            <div class="catalog-info-public-cards-item-icon">
+                                <img src="/images/bank-icon.svg" alt="ruble">
+                            </div>
+                        </div>
+                        <div class="catalog-info-public-cards-item">
+                            <h4>Курсы валют</h4>
+                            <p>Расположение банкоматов и терминалов, статус их работы</p>
+                            <button class="button-transparent">Подключить</button>
+                            <div class="catalog-info-public-cards-item-icon">
+                                <img src="/images/cash-icon.svg" alt="ruble">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-info catalog-info-unique">
+                    <p class="catalog-info-description">Доступные по подписке с защищенным каналом передачи информации</p>
+                    <div class="catalog-info-unique-cards">
+                        <div class="catalog-info-unique-cards-item">
+                            <h4>Универсальное взаимодействие со службами доставки</h4>
+                            <button class="button-transparent">Подключить</button>
+                            <div class="catalog-info-unique-cards-item-icon">
+                                <img src="/images/car-icon.svg" alt="ruble">
+                            </div>
+                        </div>
+                        <div class="catalog-info-unique-cards-item">
+                            <h4>Кредитование среднего и малого бизнеса</h4>
+                            <button class="button-transparent">Подключить</button>
+                            <div class="catalog-info-unique-cards-item-icon">
+                                <img src="/images/percent-icon.svg" alt="ruble">
+                            </div>
+                        </div>
+                        <div class="catalog-info-unique-cards-item">
+                            <h4>Песочница для зарплатных проектов</h4>
+                            <button class="button-transparent">Подключить</button>
+                            <div class="catalog-info-unique-cards-item-icon">
+                                <img src="/images/coins-icon.svg" alt="ruble">
+                            </div>
+                        </div>
+                        <div class="catalog-info-unique-cards-item">
+                            <h4>Ипотечный калькулятор</h4>
+                            <button class="button-transparent">Подключить</button>
+                            <div class="catalog-info-unique-cards-item-icon">
+                                <img src="/images/calc-icon.svg" alt="ruble">
+                            </div>
+                        </div>
+                        <div class="catalog-info-unique-cards-item">
+                            <h4>Кабинет агента</h4>
+                            <button class="button-transparent">Подключить</button>
+                            <div class="catalog-info-unique-cards-item-icon">
+                                <img src="/images/person-icon.svg" alt="ruble">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer-bg" id="footer">
+            <a href="/"><img src="images/logo.png" alt="VTB" class="header-logo"/></a>
+            <div class="footer-info">
+                <div class="footer-info-text">
+                    <p>Дегтярный переулок, д.11, лит. А, г. Санкт-Петербург, 191144</p>
+                    <p>Генеральная лицензия Банка России №1000</p>
+                    <p>© ВТБ, 2021</p>
+                </div>
+                <div class="footer-info-links">
+                    <a href="/documents/Оферта.pdf" target="_blank">Пользовательское соглашение</a>
+                    <a href="">О Банке ВТБ</a>
+                    <a href="/documents/Обработка ПДН.pdf" target="_blank">Положение об организации обработки персональных данных в Банке ВТБ (ПАО)</a>
+                </div>
+            </div>
+            <img src="/images/contacts-text.png" alt="contacts" class="footer-contacts-text-img">
+        </footer>
+
+        <!-- SCRIPTS -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="/scripts/script.js"></script>
+    </div>
+</body>
+</html>

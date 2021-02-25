@@ -33,13 +33,13 @@ $(function () {
     $(window).scroll(function () {
         var distanceFromBottom = document.body.scrollHeight - window.innerHeight - window.scrollY;
 
-        var lastNewsCard = document.querySelector('#lastNewsCard');
-        var lastNewsCardBottom = lastNewsCard.getBoundingClientRect().bottom;
+        // var lastNewsCard = document.querySelector('#lastNewsCard');
+        // var lastNewsCardBottom = lastNewsCard.getBoundingClientRect().bottom;
 
-        var footerDiv = document.querySelector('#footer');
-        var footerInfoDiv = document.querySelector('.footer-info');
+        // var footerDiv = document.querySelector('#footer');
+        // var footerInfoDiv = document.querySelector('.footer-info');
         // var footerDivTop = footerDiv.getBoundingClientRect().top;
-        var footerInfoDivBottom = footerInfoDiv.getBoundingClientRect().bottom;
+        // var footerInfoDivBottom = footerInfoDiv.getBoundingClientRect().bottom;
         var footerDivHeight = $("#footer").outerHeight();
         
         var onboardingDiv = document.querySelector('#onboarding');
@@ -90,5 +90,24 @@ $(function () {
     });
 });
 
+
+// Переключение между публичным и уникальным разделом на страницу Каталога API
+$('#public-api').click(function(){
+  $('.catalog-switch-line').css({
+    'margin-left': '0',
+    'width': '12.063rem'
+  });
+  $('.catalog-info-unique').css('display','none');
+  $('.catalog-info-public').css('display','block');
+});
+
+$('#unique-api').click(function(){
+  $('.catalog-switch-line').css({
+    'margin-left': '12.5rem',
+    'width': '12.5rem'
+  });
+  $('.catalog-info-public').css('display','none');
+  $('.catalog-info-unique').css('display','block');
+});
 
 

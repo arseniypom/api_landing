@@ -28,10 +28,14 @@
             align-items: center;
             justify-content: space-between;
 
-            a {
+            &-item {
                 margin-right: 2.25rem;
                 font-size: .875rem;
                 font-weight: 600;
+            }
+
+            .active {
+                color: #3A85FF;
             }
         }
         &-search-and-login {
