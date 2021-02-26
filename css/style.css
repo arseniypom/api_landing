@@ -784,14 +784,10 @@ p {
   position: relative;
 }
 
-.client-path-connect-text-img {
-  position: absolute;
-  max-width: 39rem;
-  top: 4rem;
-  right: 24.9rem;
-}
-
 .client-path {
+  max-width: 63.375rem;
+  height: 26.5rem;
+  margin-top: 8.25rem;
   position: relative;
   z-index: 3;
 }
@@ -802,10 +798,6 @@ p {
   top: -10rem;
 }
 
-.upper-steps-div {
-  margin-top: 8.25rem;
-}
-
 .client-path-steps {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -813,14 +805,34 @@ p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 100%;
+  height: 9.813rem;
+  position: relative;
 }
 
 .client-path-steps-item {
   max-width: 11rem;
-  position: relative;
+  position: absolute;
+}
+
+.client-path-steps-item-1 {
+  left: 0;
+}
+
+.client-path-steps-item-2 {
+  left: 12.832rem;
+}
+
+.client-path-steps-item-3 {
+  left: 26.04rem;
+}
+
+.client-path-steps-item-4 {
+  left: 39.06rem;
+}
+
+.client-path-steps-item-5 {
+  left: 52.081rem;
 }
 
 .client-path-steps-item .step-number-img {
@@ -851,6 +863,7 @@ p {
 
 .client-path-steps-item h4 {
   font-weight: 600;
+  width: 110%;
 }
 
 .client-path-steps:last-child {
@@ -860,11 +873,64 @@ p {
 }
 
 .client-path-timeline {
-  margin: 3.125rem auto 3.4rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  margin: 3.125rem 0 3.4rem;
   position: relative;
+}
+
+.client-path-timeline-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+}
+
+.client-path-timeline-wrapper .line {
+  border: 1px solid #FFFFFF;
+  height: 1px;
+  width: 100%;
+  display: block;
+}
+
+.client-path-timeline-wrapper .dot {
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background-color: #fff;
+  width: .5rem;
+  height: .5rem;
+  display: block;
+  position: absolute;
+}
+
+.client-path-timeline-wrapper .dot-1 {
+  left: 0;
+}
+
+.client-path-timeline-wrapper .dot-2 {
+  left: 12.832rem;
+}
+
+.client-path-timeline-wrapper .dot-3 {
+  left: 26.04rem;
+}
+
+.client-path-timeline-wrapper .dot-4 {
+  left: 39.06rem;
+}
+
+.client-path-timeline-wrapper .dot-5 {
+  left: 52.081rem;
+}
+
+.client-path-timeline-wrapper .dot-active {
+  background-color: #0736C9;
+  width: .875rem;
+  height: .875rem;
 }
 
 /* ----------------------- CUSTOM ARROWS ----------------------- */

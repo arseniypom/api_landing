@@ -91,6 +91,16 @@ $(function () {
 });
 
 
+// Анимация клиентского пути
+
+$(".dot").hover(function(){
+  $(this).addClass('dot-active')
+}, function(){
+  $(this).removeClass('dot-active')
+});
+
+
+
 // Переключение между публичным и уникальным разделом на страницу Каталога API
 $('#public-api').click(function(){
   $('.catalog-switch-line').css({

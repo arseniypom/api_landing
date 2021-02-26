@@ -1,17 +1,20 @@
 /* ----------------------- CLIENT PATH CONTAINER ----------------------- */
+$first-step-indent: 0;
+$second-step-indent: 12.832rem;
+$third-step-indent: 26.04rem;
+$fourth-step-indent: 39.06rem;
+$fifth-step-indent: 52.081rem;
+
 
 .client-path-bg {
     position: relative;
 }
 
-.client-path-connect-text-img {
-    position: absolute;
-    max-width: 39rem;
-    top: 4rem;
-    right: 24.9rem;
-}
-
 .client-path {
+    max-width: 63.375rem;
+    height: 26.5rem;
+    margin-top: 8.25rem;
+
     position: relative;
     z-index: 3;
 
@@ -22,17 +25,33 @@
     }
 }
 
-.upper-steps-div {
-    margin-top: 8.25rem;
-}
 .client-path-steps {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    width: 100%;
+    height: 9.813rem;
+
+    position: relative;
 
     &-item {
         max-width: 11rem;
-        position: relative;
+        position: absolute;
+
+        &-1 {
+            left: $first-step-indent;
+        }
+        &-2 {
+            left: $second-step-indent;
+        }
+        &-3 {
+            left: $third-step-indent;
+        }
+        &-4 {
+            left: $fourth-step-indent;
+        }
+        &-5 {
+            left: $fifth-step-indent;
+        }
 
         .step-number-img {
             max-width: 5.8rem;
@@ -57,9 +76,16 @@
 
         h4 {
             font-weight: 600;
+            width: 110%;
         }
     }
 }
+// .upper-steps-div {
+//     top: 0;
+// }
+// .lower-steps-div {
+//     bottom: 1;
+// }
 
 .client-path-steps:last-child {
     justify-content: space-evenly;
@@ -67,9 +93,56 @@
 
 
 .client-path-timeline {
-    margin: 3.125rem auto 3.4rem;
-    width: fit-content;
+    margin: 3.125rem 0 3.4rem;
     position: relative;
+
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        position: relative;
+
+        .line {
+            border: 1px solid #FFFFFF;
+            height: 1px;
+            width: 100%;
+            display: block;
+        }
+
+        .dot {
+            border: 2px solid #FFFFFF;
+            border-radius: 50%;
+            background-color: #fff;
+            width: .5rem;
+            height: .5rem;
+            display: block;
+
+            position: absolute;
+
+            &-1 {
+                left: $first-step-indent;
+            }
+            &-2 {
+                left: $second-step-indent;
+            }
+            &-3 {
+                left: $third-step-indent;
+            }
+            &-4 {
+                left: $fourth-step-indent;
+            }
+            &-5 {
+                left: $fifth-step-indent;
+            }
+
+            &-active {
+                background-color: #0736C9;
+                width: .875rem;
+                height: .875rem;
+            }
+        }
+    }
 }
 
 
