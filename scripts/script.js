@@ -96,6 +96,37 @@ $(function () {
 $(".dot").click(function(){
   $('.dot-active').removeClass('dot-active');
   $(this).addClass('dot-active');
+  if ($(this).hasClass("dot-1")) {
+    $('.arrows').css({
+      'left': '0',
+      'top': '-3.5rem',
+      'transform': 'rotate(180deg)'
+    });
+  } else if ($(this).hasClass("dot-2")) {
+    $('.arrows').css({
+      'left': '12.982rem',
+      'top': '1rem',
+      'transform': 'rotate(0deg)'
+    });
+  } else if ($(this).hasClass("dot-3")) {
+    $('.arrows').css({
+      'left': '26.04rem',
+      'top': '-3.5rem',
+      'transform': 'rotate(180deg)'
+    });
+  } else if ($(this).hasClass("dot-4")) {
+    $('.arrows').css({
+      'left': '39.21rem',
+      'top': '1rem',
+      'transform': 'rotate(0deg)'
+    });
+  } else if ($(this).hasClass("dot-5")) {
+    $('.arrows').css({
+      'left': '52.081rem',
+      'top': '-3.5rem',
+      'transform': 'rotate(180deg)'
+    });
+  }
 });
 
 

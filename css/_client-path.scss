@@ -30,6 +30,7 @@ $fifth-step-indent: 52.081rem;
     align-items: flex-start;
     width: 100%;
     height: 9.813rem;
+    padding-top: .5rem;
 
     position: relative;
 
@@ -41,13 +42,13 @@ $fifth-step-indent: 52.081rem;
             left: $first-step-indent;
         }
         &-2 {
-            left: $second-step-indent;
+            left: calc(#{$second-step-indent} + .15rem);
         }
         &-3 {
             left: $third-step-indent;
         }
         &-4 {
-            left: $fourth-step-indent;
+            left: calc(#{$fourth-step-indent} + .15rem);
         }
         &-5 {
             left: $fifth-step-indent;
@@ -151,8 +152,8 @@ $fifth-step-indent: 52.081rem;
     height: 2.5rem;
     width: .7rem;
     position: absolute;
-    left: 21.2%;
-    top: 1.75rem;
+    left: calc(#{$second-step-indent} + .15rem);
+    top: 1rem;
     z-index: 3;
     overflow: hidden;
 

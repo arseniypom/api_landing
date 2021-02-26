@@ -807,6 +807,7 @@ p {
           align-items: flex-start;
   width: 100%;
   height: 9.813rem;
+  padding-top: .5rem;
   position: relative;
 }
 
@@ -820,7 +821,7 @@ p {
 }
 
 .client-path-steps-item-2 {
-  left: 12.832rem;
+  left: calc(12.832rem + .15rem);
 }
 
 .client-path-steps-item-3 {
@@ -828,7 +829,7 @@ p {
 }
 
 .client-path-steps-item-4 {
-  left: 39.06rem;
+  left: calc(39.06rem + .15rem);
 }
 
 .client-path-steps-item-5 {
@@ -938,8 +939,8 @@ p {
   height: 2.5rem;
   width: .7rem;
   position: absolute;
-  left: 21.2%;
-  top: 1.75rem;
+  left: calc(12.832rem + .15rem);
+  top: 1rem;
   z-index: 3;
   overflow: hidden;
   display: -webkit-box;
