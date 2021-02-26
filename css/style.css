@@ -927,7 +927,7 @@ p {
   left: 52.081rem;
 }
 
-.client-path-timeline-wrapper .dot-active {
+.client-path-timeline-wrapper .dot-active, .client-path-timeline-wrapper .dot:hover {
   background-color: #0736C9;
   width: .875rem;
   height: .875rem;

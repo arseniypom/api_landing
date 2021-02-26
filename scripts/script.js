@@ -93,10 +93,9 @@ $(function () {
 
 // Анимация клиентского пути
 
-$(".dot").hover(function(){
-  $(this).addClass('dot-active')
-}, function(){
-  $(this).removeClass('dot-active')
+$(".dot").click(function(){
+  $('.dot-active').removeClass('dot-active');
+  $(this).addClass('dot-active');
 });
 
 

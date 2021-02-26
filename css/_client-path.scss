@@ -136,7 +136,7 @@ $fifth-step-indent: 52.081rem;
                 left: $fifth-step-indent;
             }
 
-            &-active {
+            &-active, &:hover {
                 background-color: #0736C9;
                 width: .875rem;
                 height: .875rem;
