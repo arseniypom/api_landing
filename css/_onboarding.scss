@@ -11,63 +11,105 @@
     position: relative;
 }
 
-.onboarding-open-interface-text-img {
-    max-width: 71.85%;
-    // max-width: 59.906rem;
-    position: absolute;
-    top: 8%;
-    left: 0;
-}
+// .onboarding-open-interface-text-img {
+//     max-width: 71.85%;
+//     position: absolute;
+//     top: 8%;
+//     left: 0;
+// }
 
 .onboarding {
     color: #fff;
     position: relative;
     width: 100%;
-    max-width: 82.5%;
+    max-width: 79%;
 
     h3 {
-        max-width: 38.3rem;
+        max-width: 58.1%;
+        font-weight: 600;
     }
 
     h1 {
-        max-width: 43rem;
+        max-width: 62.21%;
+        font-size: 300%;
         margin: 1.75rem 0 6.25rem;
     }
 
-    &-round-letters {
-        width: 120px;
-        height: 120px;
+    &-image {
+        height: auto;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
 
         position: absolute;
-        right: 2.8rem;
-        top: .5rem;
+        right: 2.9rem;
+        top: -1.5rem;
 
-        -webkit-animation: rotation 13s infinite linear;
-        animation: rotation 13s infinite linear;
-    }
-    @-webkit-keyframes rotation {
-        from {
-            -webkit-transform: rotate(0deg);
-        }
-        to {
-            -webkit-transform: rotate(359deg);
-        }
-    }
-    @keyframes rotation {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(359deg);
-        }
-    }
+        &-round-letters {
+            width: 120px;
+            height: 120px;
 
-    &-arrow {
-        max-width: 5.75rem;
+            margin-bottom: 1.5rem;
+    
+            -webkit-animation: rotation 13s infinite linear;
+            animation: rotation 13s infinite linear;
+        }
 
-        position: absolute;
-        right: 3.6rem;
-        top: 9.5rem;
+        @-webkit-keyframes rotation {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(359deg);
+            }
+        }
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(359deg);
+            }
+        }
+    
+        &-arrow {
+            max-width: 5.75rem;
+        }
+    }
+}
+
+@media (min-width: 1670px) {
+    .onboarding {
+        h3 {
+            font-size: 225%;
+            line-height: 2.625rem;
+        }
+    
+        h1 {
+            font-size: 450%;
+            line-height: 4.875rem;
+        }
+
+        &-image {
+            position: absolute;
+            right: 2.9rem;
+            top: -1.5rem;
+    
+            &-round-letters {
+                width: 180px;
+                height: 180px;
+    
+                margin-bottom: 1.5rem;
+        
+                -webkit-animation: rotation 13s infinite linear;
+                animation: rotation 13s infinite linear;
+            }
+        
+            &-arrow {
+                max-width: 8.563rem;
+            }
+        }
     }
 }
 
@@ -75,7 +117,7 @@
 .onboarding-button {
     position: fixed;
     color: #fff;
-    left: 8.75%;
+    left: 10.5%;
     bottom: 15%;
     z-index: 4;
     
@@ -83,5 +125,13 @@
 
     &-text {
         margin-left: .375rem;
+    }
+
+    &-arrow {
+        max-width: 8.563rem;
+
+        position: absolute;
+        right: 3.6rem;
+        top: 9.5rem;
     }
 }

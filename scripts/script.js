@@ -36,7 +36,10 @@ $(function () {
         
         var onboardingDiv = document.querySelector('#onboarding');
         var onboardingDivBottom = onboardingDiv.getBoundingClientRect().bottom;
-
+        
+        var buttonWidth = document.querySelector('#action-button').offsetWidth;
+        var leftButtonIndent = ($(window).width() - buttonWidth) / 2 + 'px';
+        // console.log(leftButtonIndent);
         if (onboardingDivBottom < document.documentElement.clientHeight) {
           $(".onboarding-button").css({
             "left":"2rem",
@@ -50,7 +53,7 @@ $(function () {
 
           if (distanceFromBottom <= footerDivHeight - distanceFromBottom + 50) {
             $(".onboarding-button").css({
-              "left":"43%",
+              "left": leftButtonIndent,
               "padding": "1rem 2rem",
               "bottom": `${footerDivHeight - distanceFromBottom + 50}px`
             });
@@ -69,7 +72,7 @@ $(function () {
           }
         } else {
           $(".onboarding-button").css({
-            "left":"8.75%",
+            "left":"10.5%",
             "bottom":"15%",
             "padding":"1rem 2rem"
           });

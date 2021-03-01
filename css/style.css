@@ -443,35 +443,45 @@ p {
   position: relative;
 }
 
-.onboarding-open-interface-text-img {
-  max-width: 71.85%;
-  position: absolute;
-  top: 8%;
-  left: 0;
-}
-
 .onboarding {
   color: #fff;
   position: relative;
   width: 100%;
-  max-width: 82.5%;
+  max-width: 79%;
 }
 
 .onboarding h3 {
-  max-width: 38.3rem;
+  max-width: 58.1%;
+  font-weight: 600;
 }
 
 .onboarding h1 {
-  max-width: 43rem;
+  max-width: 62.21%;
+  font-size: 300%;
   margin: 1.75rem 0 6.25rem;
 }
 
-.onboarding-round-letters {
+.onboarding-image {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  right: 2.9rem;
+  top: -1.5rem;
+}
+
+.onboarding-image-round-letters {
   width: 120px;
   height: 120px;
-  position: absolute;
-  right: 2.8rem;
-  top: .5rem;
+  margin-bottom: 1.5rem;
   -webkit-animation: rotation 13s infinite linear;
   animation: rotation 13s infinite linear;
 }
@@ -496,17 +506,40 @@ p {
   }
 }
 
-.onboarding-arrow {
+.onboarding-image-arrow {
   max-width: 5.75rem;
-  position: absolute;
-  right: 3.6rem;
-  top: 9.5rem;
+}
+
+@media (min-width: 1670px) {
+  .onboarding h3 {
+    font-size: 225%;
+    line-height: 2.625rem;
+  }
+  .onboarding h1 {
+    font-size: 450%;
+    line-height: 4.875rem;
+  }
+  .onboarding-image {
+    position: absolute;
+    right: 2.9rem;
+    top: -1.5rem;
+  }
+  .onboarding-image-round-letters {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 1.5rem;
+    -webkit-animation: rotation 13s infinite linear;
+    animation: rotation 13s infinite linear;
+  }
+  .onboarding-image-arrow {
+    max-width: 8.563rem;
+  }
 }
 
 .onboarding-button {
   position: fixed;
   color: #fff;
-  left: 8.75%;
+  left: 10.5%;
   bottom: 15%;
   z-index: 4;
   -webkit-transition: left .3s;
@@ -515,6 +548,13 @@ p {
 
 .onboarding-button-text {
   margin-left: .375rem;
+}
+
+.onboarding-button-arrow {
+  max-width: 8.563rem;
+  position: absolute;
+  right: 3.6rem;
+  top: 9.5rem;
 }
 
 /* ----------------------- TARGET AUDIENCE CONTAINER ----------------------- */
