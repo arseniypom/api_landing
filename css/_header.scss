@@ -32,10 +32,16 @@
                 margin-right: 2.25rem;
                 font-size: .875rem;
                 font-weight: 600;
+
+                &:hover {
+                    text-decoration-line: underline;
+                    text-underline-offset: 5px;
+                }
             }
 
             .active {
                 color: #3A85FF;
+                text-decoration-line: none;
             }
         }
         &-search-and-login {
@@ -44,11 +50,6 @@
             justify-content: space-between;
 
             .search-icon {
-                // content: "";
-                // display: block;
-                // width: 1px;
-                // height: 1.75rem;
-                // background-color: #fff;
                 border-right: 1px solid #ffffff;
                 padding: 6px 4rem 6px 0;
             }

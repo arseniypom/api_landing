@@ -94,6 +94,10 @@
         .connect-instruction {
             color: #3A85FF;
             text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 }

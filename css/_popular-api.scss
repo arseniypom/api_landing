@@ -57,22 +57,33 @@
         font-weight: 600;
         line-height: 2.25rem;
     }
+}
 
-    a {
+.popular-api-card-link {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+        margin-left: 2rem;
+    }
+
+    &-arrow {
         position: absolute;
-        bottom: 2rem;
-        left: 2rem;
-        color: #3A85FF;
-
-        display: flex;
-        align-items: center;
+        left: 0;
+        transition: left .3s ease-in-out;
     }
 }
 
-
-.popular-api-card-arrow {
-    margin-right: .875rem;
+.popular-api-card-link:hover .popular-api-card-link-arrow {
+    left: .375rem;
+    filter: brightness(0) saturate(100%) invert(15%) sepia(92%) saturate(4028%) hue-rotate(221deg) brightness(90%) contrast(105%);;
 }
+
 
 @media (max-width: 1200px) {
     .popular-api {

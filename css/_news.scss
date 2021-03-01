@@ -66,15 +66,27 @@
     position: absolute;
     bottom: 2rem;
     left: 2rem;
-    color: #3A85FF;
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    p {
+        margin-left: 2rem;
+    }
 }
 
 .card-arrow {
-    margin-right: .875rem;
+    position: absolute;
+    left: 0;
+    transition: left .3s ease-in-out;
 }
+
+.card-read_more:hover .card-arrow {
+    left: .375rem;
+    filter: brightness(0) saturate(100%) invert(15%) sepia(92%) saturate(4028%) hue-rotate(221deg) brightness(90%) contrast(105%);;
+}
+
 
 .news-action {
     &-active {

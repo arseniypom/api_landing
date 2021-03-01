@@ -61,6 +61,16 @@ p {
     color: #22D9A2;
 }
 
+.link-primary {
+    color: #3A85FF;
+
+    &:hover, &:active {
+        color: #0142D3;
+        text-decoration-line: underline;
+        text-underline-offset: 3px;
+    }
+}
+
 .title-container {
     margin: 6.25rem auto 3.5rem;
     max-width: 82.5%;
