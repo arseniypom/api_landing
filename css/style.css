@@ -814,6 +814,7 @@ p {
 .client-path-steps-item {
   max-width: 11rem;
   position: absolute;
+  cursor: pointer;
 }
 
 .client-path-steps-item-1 {
@@ -905,7 +906,10 @@ p {
   width: .5rem;
   height: .5rem;
   display: block;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
   position: absolute;
+  cursor: pointer;
 }
 
 .client-path-timeline-wrapper .dot-1 {
@@ -928,7 +932,7 @@ p {
   left: 52.081rem;
 }
 
-.client-path-timeline-wrapper .dot-active, .client-path-timeline-wrapper .dot:hover {
+.client-path-timeline-wrapper .dot-hovered, .client-path-timeline-wrapper .dot-clicked, .client-path-timeline-wrapper .dot:hover {
   background-color: #0736C9;
   width: .875rem;
   height: .875rem;

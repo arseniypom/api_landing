@@ -36,7 +36,9 @@ $fifth-step-indent: 52.081rem;
 
     &-item {
         max-width: 11rem;
+
         position: absolute;
+        cursor: pointer;
 
         &-1 {
             left: $first-step-indent;
@@ -81,12 +83,6 @@ $fifth-step-indent: 52.081rem;
         }
     }
 }
-// .upper-steps-div {
-//     top: 0;
-// }
-// .lower-steps-div {
-//     bottom: 1;
-// }
 
 .client-path-steps:last-child {
     justify-content: space-evenly;
@@ -118,8 +114,10 @@ $fifth-step-indent: 52.081rem;
             width: .5rem;
             height: .5rem;
             display: block;
+            transition: .1s ease-in-out;
 
             position: absolute;
+            cursor: pointer;
 
             &-1 {
                 left: $first-step-indent;
@@ -137,7 +135,7 @@ $fifth-step-indent: 52.081rem;
                 left: $fifth-step-indent;
             }
 
-            &-active, &:hover {
+            &-hovered, &-clicked, &:hover {
                 background-color: #0736C9;
                 width: .875rem;
                 height: .875rem;

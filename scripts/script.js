@@ -32,14 +32,6 @@ function closeCookieBanner() {
 $(function () {
     $(window).scroll(function () {
         var distanceFromBottom = document.body.scrollHeight - window.innerHeight - window.scrollY;
-
-        // var lastNewsCard = document.querySelector('#lastNewsCard');
-        // var lastNewsCardBottom = lastNewsCard.getBoundingClientRect().bottom;
-
-        // var footerDiv = document.querySelector('#footer');
-        // var footerInfoDiv = document.querySelector('.footer-info');
-        // var footerDivTop = footerDiv.getBoundingClientRect().top;
-        // var footerInfoDivBottom = footerInfoDiv.getBoundingClientRect().bottom;
         var footerDivHeight = $("#footer").outerHeight();
         
         var onboardingDiv = document.querySelector('#onboarding');
@@ -93,45 +85,78 @@ $(function () {
 
 // Анимация клиентского пути
 
+let item1Css = {
+  'left': '0',
+  'top': '-3.5rem',
+  'transform': 'rotate(180deg)'
+};
+let item2Css = {
+  'left': '12.982rem',
+  'top': '1rem',
+  'transform': 'rotate(0deg)'
+};
+let item3Css = {
+  'left': '26.04rem',
+  'top': '-3.5rem',
+  'transform': 'rotate(180deg)'
+};
+let item4Css = {
+  'left': '39.21rem',
+  'top': '1rem',
+  'transform': 'rotate(0deg)'
+};
+let item5Css = {
+  'left': '52.081rem',
+  'top': '-3.5rem',
+  'transform': 'rotate(180deg)'
+};
+
+
+// let regex = /client-path-steps-item-/;
+
+// $(".client-path-steps-item").click(function(){
+//   let classes = this.className.split(' ');
+//   classes.forEach(class => {
+//     return class.match(regex);
+//   });
+// });
+
+$(".client-path-steps-item").hover(function(){
+    let stepName = this.className.split(' ')[1];
+    let stepNumber = stepName[stepName.length - 1];
+    $(`.dot-${stepNumber}`).addClass('dot-hovered');
+  }, function(){
+    let stepName = this.className.split(' ')[1];
+    let stepNumber = stepName[stepName.length - 1];
+    $(`.dot-${stepNumber}`).removeClass('dot-hovered');
+});
+
+$(".client-path-steps-item").click(function(){
+  let stepName = this.className.split(' ')[1];
+  let stepNumber = stepName[stepName.length - 1];
+  $('.dot-clicked').removeClass('dot-clicked');
+  $(`.dot-${stepNumber}`).addClass('dot-clicked');
+  $('.arrows').css(eval('item'+ stepNumber + 'Css'));
+});
+
 $(".dot").click(function(){
-  $('.dot-active').removeClass('dot-active');
-  $(this).addClass('dot-active');
+  $('.dot-clicked').removeClass('dot-clicked');
+  $(this).addClass('dot-clicked');
   if ($(this).hasClass("dot-1")) {
-    $('.arrows').css({
-      'left': '0',
-      'top': '-3.5rem',
-      'transform': 'rotate(180deg)'
-    });
+    $('.arrows').css(item1Css);
   } else if ($(this).hasClass("dot-2")) {
-    $('.arrows').css({
-      'left': '12.982rem',
-      'top': '1rem',
-      'transform': 'rotate(0deg)'
-    });
+    $('.arrows').css(item2Css);
   } else if ($(this).hasClass("dot-3")) {
-    $('.arrows').css({
-      'left': '26.04rem',
-      'top': '-3.5rem',
-      'transform': 'rotate(180deg)'
-    });
+    $('.arrows').css(item3Css);
   } else if ($(this).hasClass("dot-4")) {
-    $('.arrows').css({
-      'left': '39.21rem',
-      'top': '1rem',
-      'transform': 'rotate(0deg)'
-    });
+    $('.arrows').css(item4Css);
   } else if ($(this).hasClass("dot-5")) {
-    $('.arrows').css({
-      'left': '52.081rem',
-      'top': '-3.5rem',
-      'transform': 'rotate(180deg)'
-    });
+    $('.arrows').css(item5Css);
   }
 });
 
 
-
-// Переключение между публичным и уникальным разделом на страницу Каталога API
+// Переключение между публичным и уникальным разделом на странице Каталога API
 $('#public-api').click(function(){
   $('.catalog-switch-line').css({
     'margin-left': '0',
