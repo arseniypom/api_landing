@@ -356,9 +356,20 @@ p {
 }
 
 /* ----------------------- HEADER ----------------------- */
-.header {
+.header-bg {
   width: 100%;
   padding: 1.313rem 2rem 1.25rem;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,19 +379,18 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 }
 
 .header-logo {
   max-width: 7rem;
 }
 
+.header-burger {
+  display: none;
+}
+
 .header-menu {
-  width: 57rem;
+  width: 71.13%;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -394,6 +404,9 @@ p {
 }
 
 .header-menu-links {
+  width: 43.2%;
+  min-width: 19.6rem;
+  margin-right: 25.43%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -406,7 +419,6 @@ p {
 }
 
 .header-menu-links-item {
-  margin-right: 2.25rem;
   font-size: .875rem;
   font-weight: 600;
 }
@@ -424,6 +436,8 @@ p {
 }
 
 .header-menu-search-and-login {
+  width: 32.2%;
+  min-width: 14.6%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -437,11 +451,11 @@ p {
 
 .header-menu-search-and-login .search-icon {
   border-right: 1px solid #ffffff;
-  padding: 6px 4rem 6px 0;
+  padding: 6px 23% 6px 0;
 }
 
 .header-menu-search-and-login a {
-  margin-left: 2.5rem;
+  margin-left: 7%;
   font-size: .875rem;
   font-weight: 600;
 }
@@ -684,6 +698,26 @@ p {
 
 .target-audience-section-info-bullets .connect-instruction:hover {
   text-decoration: none;
+}
+
+@media (max-width: 1023px) {
+  .target-audience-section {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .target-audience-section-developers {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .target-audience-section-business {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 /* ----------------------- POPULAR API CONTAINER ----------------------- */
@@ -1125,12 +1159,13 @@ p {
 
 .suppliers-list-plus {
   position: absolute;
-  right: 18.5rem;
+  right: 29.8%;
   top: -8.25rem;
 }
 
 .suppliers-list-item {
   width: 25%;
+  min-width: 16.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1254,6 +1289,35 @@ p {
 
 .become-supplier-form-button-icon {
   margin-right: .45rem;
+}
+
+@media (max-width: 1023px) {
+  .suppliers-list-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .suppliers-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .suppliers-list-item {
+    min-width: 20rem;
+  }
+  .become-supplier {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .become-supplier-text {
+    margin-bottom: 2.5rem;
+  }
 }
 
 /* ----------------------- NEWS CONTAINER ----------------------- */

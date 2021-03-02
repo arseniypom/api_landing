@@ -1,22 +1,44 @@
 /* ----------------------- HEADER ----------------------- */
-.header {
+.header-bg {
     width: 100%;
     padding: 1.313rem 2rem 1.25rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: fixed;
     z-index: 100;
     top: 0;
     transition: all 0.2s ease-in-out;
+}
+
+// .header-bg::before {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: plum;
+// }
+
+.header {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     &-logo {
         max-width: 7rem;
     }
 
+    &-burger {
+        display: none;
+    }
+
     &-menu {
-        width: 57rem;
+        // width: 57rem;
+        width: 71.13%;
         color: #ffffff;
 
         display: flex;
@@ -24,12 +46,15 @@
         justify-content: space-between;
 
         &-links {
+            width: 43.2%;
+            min-width: 19.6rem;
+
+            margin-right: 25.43%;
             display: flex;
             align-items: center;
             justify-content: space-between;
 
             &-item {
-                margin-right: 2.25rem;
                 font-size: .875rem;
                 font-weight: 600;
 
@@ -45,20 +70,61 @@
             }
         }
         &-search-and-login {
+            width: 32.2%;
+            min-width: 14.6%;
             display: flex;
             align-items: center;
             justify-content: space-between;
 
             .search-icon {
                 border-right: 1px solid #ffffff;
-                padding: 6px 4rem 6px 0;
+                padding: 6px 23% 6px 0;
             }
 
             a {
-                margin-left: 2.5rem;
+                margin-left: 7%;
                 font-size: .875rem;
                 font-weight: 600;
             }
         }
     }
 }
+
+// .search-icon-smartphone {
+//     display: none;
+// }
+
+// @media (max-width: 1023px) {
+//     .header {
+//         &-burger {
+//             width: 21px;
+//             height: 18px;
+//             display: block;
+//             position: relative;
+
+//             span {
+//                 background-color: #fff;
+//                 position: absolute;
+//                 left: 0;
+//                 top: 8px;
+//                 width: 100%;
+//                 height: 2px;
+//                 border-radius: 8px;
+//             }
+//         }
+//         &-burger::before, &-burger::after {
+//             content: '';
+//             background-color: #fff;
+//             position: absolute;
+//             width: 100%;
+//             height: 2px;
+//             border-radius: 8px;
+//         }
+//         &-burger::before {
+//             top: 0;
+//         }
+//         &-burger::after {
+//             bottom: 0;
+//         }
+//     }
+// }

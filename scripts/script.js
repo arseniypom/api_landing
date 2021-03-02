@@ -3,20 +3,20 @@ var prevScrollpos = window.pageYOffset;
 $(window).on("scroll", function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    $(".header").css('top', '0')
+    $(".header-bg").css('top', '0')
   } else {
-    $(".header").css('top', '-70px')
+    $(".header-bg").css('top', '-70px')
   }
   prevScrollpos = currentScrollPos;
 
   // Добавление непрозрачного фона хэдеру при скролле ниже 70 пикселей
   // Добавление прозрачного фона при нахождении наверху страницы
   if ($(window).scrollTop() > 70) {
-    $(".header").css({
+    $(".header-bg").css({
       "background-color": "#0062FF"
     });
   } else {
-    $(".header").css({
+    $(".header-bg").css({
       "background-color": "transparent"
     });
   }

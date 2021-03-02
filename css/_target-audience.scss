@@ -101,3 +101,16 @@
         }
     }
 }
+
+@media (max-width: 1023px) {
+    .target-audience-section {
+        align-items: center;
+
+        &-developers {
+            flex-direction: column;
+        }
+        &-business {
+            flex-direction: column-reverse;
+        }
+    }
+}
