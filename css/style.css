@@ -381,8 +381,9 @@ p {
           justify-content: space-between;
 }
 
-.header-logo {
-  max-width: 7rem;
+.header-logo-img {
+  width: 100%;
+  width: 7rem;
 }
 
 .header-burger {
@@ -449,12 +450,12 @@ p {
           justify-content: space-between;
 }
 
-.header-menu-search-and-login .search-icon {
+.header-menu-search-and-login-search_link {
   border-right: 1px solid #ffffff;
   padding: 6px 23% 6px 0;
 }
 
-.header-menu-search-and-login a {
+.header-menu-search-and-login-link {
   margin-left: 7%;
   font-size: .875rem;
   font-weight: 600;

@@ -1,11 +1,12 @@
 // Скрытие хэдера при скролле вниз и отображение при скролле вверх
 var prevScrollpos = window.pageYOffset;
+var headerDivHeight = $("#navbar").outerHeight();
 $(window).on("scroll", function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     $(".header-bg").css('top', '0')
   } else {
-    $(".header-bg").css('top', '-70px')
+    $(".header-bg").css('top', `-${headerDivHeight}px`)
   }
   prevScrollpos = currentScrollPos;
 
@@ -19,6 +20,7 @@ $(window).on("scroll", function() {
     $(".header-bg").css({
       "background-color": "transparent"
     });
+    $(".header-bg").css('top', '0')
   }
 });
 

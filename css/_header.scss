@@ -28,8 +28,9 @@
     align-items: center;
     justify-content: space-between;
 
-    &-logo {
-        max-width: 7rem;
+    &-logo-img {
+        width: 100%;
+        width: 7rem;
     }
 
     &-burger {
@@ -76,12 +77,15 @@
             align-items: center;
             justify-content: space-between;
 
-            .search-icon {
+            &-search_link {
                 border-right: 1px solid #ffffff;
                 padding: 6px 23% 6px 0;
-            }
+                img {
 
-            a {
+                }
+
+            }
+            &-link {
                 margin-left: 7%;
                 font-size: .875rem;
                 font-weight: 600;
