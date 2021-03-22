@@ -1,8 +1,8 @@
 // Скрытие хэдера при скролле вниз и отображение при скролле вверх
 var prevScrollpos = window.pageYOffset;
-var headerDivHeight = $("#navbar").outerHeight();
 $(window).on("scroll", function() {
   var currentScrollPos = window.pageYOffset;
+  var headerDivHeight = $("#navbar").outerHeight();
   if (prevScrollpos > currentScrollPos) {
     $(".header-bg").css('top', '0')
   } else {
@@ -13,14 +13,18 @@ $(window).on("scroll", function() {
   // Добавление непрозрачного фона хэдеру при скролле ниже 70 пикселей
   // Добавление прозрачного фона при нахождении наверху страницы
   if ($(window).scrollTop() > 70) {
-    $(".header-bg").css({
-      "background-color": "#0062FF"
-    });
+
   } else {
+    $(".header-bg").css('top', '0');
     $(".header-bg").css({
       "background-color": "transparent"
     });
-    $(".header-bg").css('top', '0')
+  }
+
+  if ($(window).scrollTop() > 150) {
+    $(".header-bg").css({
+      "background-color": "#0062FF"
+    });
   }
 });
 
@@ -41,39 +45,57 @@ $(function () {
         
         var buttonWidth = document.querySelector('#action-button').offsetWidth;
         var leftButtonIndent = ($(window).width() - buttonWidth) / 2 + 'px';
-        // console.log(leftButtonIndent);
+        
         if (onboardingDivBottom < document.documentElement.clientHeight) {
           $(".onboarding-button").css({
-            "left":"2rem",
-            "padding": "1rem"
+            "opacity": "0"
           });
-          $(".onboarding-button").removeClass("button-transparent button-transparent-big");
-          $(".onboarding-button").addClass("button-blue");
-          $(".onboarding-button-text").css({
-            "display":"none",
-          })
 
-          if (distanceFromBottom <= footerDivHeight - distanceFromBottom + 50) {
-            $(".onboarding-button").css({
-              "left": leftButtonIndent,
-              "padding": "1rem 2rem",
-              "bottom": `${footerDivHeight - distanceFromBottom + 50}px`
-            });
-            $(".onboarding-button-text").css({
-              "display":"inline",
-            })
-          } else {
-            $(".onboarding-button").css({
-              "left":"2rem",
-              "padding": "1rem",
-              "bottom": "15%"
-            });
+          if (onboardingDivBottom < document.documentElement.clientHeight - 70) {
+            $(".onboarding-button").removeClass("button-transparent button-transparent-big");
+            $(".onboarding-button").addClass("button-blue");
             $(".onboarding-button-text").css({
               "display":"none",
-            })
+            });
+            $(".onboarding-button").css({
+              "opacity": "1",
+              "left":"2rem",
+              "padding": "1rem",
+              "bottom":"15%"
+            });
+
+            if (distanceFromBottom <= footerDivHeight - distanceFromBottom + 350) {
+              $(".onboarding-button").css({
+                "opacity": "0"
+              });
+
+
+              if (distanceFromBottom <= footerDivHeight - distanceFromBottom + 50) {
+                $(".onboarding-button-text").css({
+                  "display":"inline",
+                });
+                $(".onboarding-button").css({
+                  "opacity": "1",
+                  "left": leftButtonIndent,
+                  "padding": "1rem 2rem",
+                  "bottom": `${footerDivHeight - distanceFromBottom + 50}px`
+                });
+              } else if (distanceFromBottom <= footerDivHeight - distanceFromBottom + 250) {
+                $(".onboarding-button-text").css({
+                  "display":"inline",
+                });
+                $(".onboarding-button").css({
+                  "opacity": "0",
+                  "left": leftButtonIndent,
+                  "padding": "1rem 2rem",
+                  "bottom": `${footerDivHeight - distanceFromBottom + 50}px`
+                });
+              }
+            }
           }
         } else {
           $(".onboarding-button").css({
+            "opacity":"1",
             "left":"10.5%",
             "bottom":"15%",
             "padding":"1rem 2rem"

@@ -11,13 +11,6 @@
     position: relative;
 }
 
-// .onboarding-open-interface-text-img {
-//     max-width: 71.85%;
-//     position: absolute;
-//     top: 8%;
-//     left: 0;
-// }
-
 .onboarding {
     color: #fff;
     position: relative;
@@ -121,7 +114,9 @@
     bottom: 15%;
     z-index: 4;
     
-    transition: left .3s;
+    opacity: 1;
+
+    transition: opacity .1s ease-in-out;
 
     &-text {
         margin-left: .375rem;
