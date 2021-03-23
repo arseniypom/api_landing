@@ -152,21 +152,18 @@ $(".client-path-steps-item").hover(function(){
     let stepName = this.className.split(' ')[1];
     let stepNumber = stepName[stepName.length - 1];
     $(`.dot-${stepNumber}`).addClass('dot-hovered');
+    $('.dot-clicked').removeClass('dot-clicked');
+    $(`.dot-${stepNumber}`).addClass('dot-clicked');
+    $('.arrows').css(eval('item'+ stepNumber + 'Css'));
   }, function(){
     let stepName = this.className.split(' ')[1];
     let stepNumber = stepName[stepName.length - 1];
     $(`.dot-${stepNumber}`).removeClass('dot-hovered');
-});
+  }
+);
 
-$(".client-path-steps-item").click(function(){
-  let stepName = this.className.split(' ')[1];
-  let stepNumber = stepName[stepName.length - 1];
-  $('.dot-clicked').removeClass('dot-clicked');
-  $(`.dot-${stepNumber}`).addClass('dot-clicked');
-  $('.arrows').css(eval('item'+ stepNumber + 'Css'));
-});
 
-$(".dot").click(function(){
+$(".dot").hover(function(){
   $('.dot-clicked').removeClass('dot-clicked');
   $(this).addClass('dot-clicked');
   if ($(this).hasClass("dot-1")) {
