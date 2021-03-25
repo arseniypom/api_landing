@@ -4,11 +4,9 @@ $color-neutral-05: #F3F4F6;
 $color-neutral-30: #B1B5BB;
 $color-neutral-50: #7B7E86;
 $color-neutral-90: #22242A;
-
+$color-coldgrey-50: #7E8390;
 $color-primary-50: #307FFF; //focus
 $color-primary-60: #0062FF; //hover
-
-
 
 body {
     height: 100%;
@@ -166,7 +164,7 @@ p {
 
 .button-blue {
     color: #fff;
-    background-color: $color-primary-60;
+    background-color: $color-primary-50;
     font-family: $main-font;
     border-radius: 4px;
     border: none;
